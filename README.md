@@ -1,10 +1,6 @@
 # CIRFUZZ
 
-Research code for **fuzzing V2X (vehicle‑to‑everything) cooperative perception**.
-
-The repository bundles three sub‑projects that together build a pipeline:
-prepare a semantic road dataset → run a cooperative perception model on it →
-mutate cooperative road objects to expose ego/V2X disagreements.
+Research code for **fuzzing collaborative perception systems**.
 
 ```
 CIRFUZZ/
