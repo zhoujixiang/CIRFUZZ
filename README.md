@@ -4,9 +4,9 @@ Research code for **fuzzing collaborative perception systems**.
 
 ```
 CIRFUZZ/
-├── CIRFUZZING/        # the fuzzing tool: v2x_fuzz.py + helpers   (main entry point)
+├── CIRFUZZING/        # the fuzzing tool: cps_fuzz.py + helpers   (main entry point)
 ├── road_prediction/   # builds the semantic road dataset with SalsaNext
-└── V2V4Real/          # OpenCOOD-based cooperative perception stack (code only)
+└── V2V4Real/          # OpenCOOD-based collaborative perception stack (code only)
 ```
 
 > **Not tracked in this repo** (populated at runtime, several tens of GB — see
@@ -15,21 +15,22 @@ CIRFUZZ/
 
 ---
 
-## 1. `CIRFUZZING/v2x_fuzz.py` — the fuzzer
+## 1. `CIRFUZZING/cps_fuzz.py` — the fuzzer
 
 ### What it does
 
-`v2x_fuzz.py` fuzzes a cooperative perception model by **editing the objects a
-cooperative agent (CAV) reports on the road**, then measuring how much the
-ego‑vs‑V2X perception *disagrees* afterwards. Mutations happen in a configurable
-road region so that inserted/deleted objects look plausible to the model.
+`cps_fuzz.py` fuzzes a collaborative perception model by **editing the objects a
+collaborating agent reports on the road**, then measuring how much the ego vs
+collaborative perception *disagrees* afterwards. Mutations happen in a
+configurable road region so that inserted/deleted objects look plausible to the
+model.
 
 Two mutation primitives are used:
 
 | Operation | Effect |
 |-----------|--------|
-| **insert** | Adds a synthetic vehicle (ShapeNet mesh) onto a road region of the cooperative agent's point cloud + YAML annotation. |
-| **delete** | Removes an existing cooperative vehicle from the point cloud + YAML, optionally filling the resulting lidar shadow with sampled road points. |
+| **insert** | Adds a synthetic vehicle (ShapeNet mesh) onto a road region of the collaborating agent's point cloud + YAML annotation. |
+| **delete** | Removes an existing collaborating‑agent vehicle from the point cloud + YAML, optionally filling the resulting lidar shadow with sampled road points. |
 
 Each mutated scene is written out as a self‑contained OpenCOOD case
 (`velodyne/*.pcd` + `*.yaml` per agent), so it can be fed straight to
@@ -39,7 +40,7 @@ Each mutated scene is written out as a self‑contained OpenCOOD case
 
 ```
                         ┌─────────────────────────────┐
-  dataset frame ──────► │  load ego + coop PC / YAML  │
+  dataset frame ──────► │  load ego + collab PC / YAML│
                         │  segment road & non-road    │
                         └──────────────┬──────────────┘
                                        ▼
@@ -57,7 +58,8 @@ Each mutated scene is written out as a self‑contained OpenCOOD case
                                ▼
         ┌──────────────────────────────────────────────────┐
         │  fitness = object_missing + localization_failure  │
-        │  (Δ V2X − ego), from inference.py --compare_ego_v2x│
+        │  (Δ collab − ego), from inference.py              │
+        │  --compare_ego_v2x                                │
         └──────────────────────┬───────────────────────────┘
                                ▼
         valid_cases/ · baseline_cases/ · interesting_cases/ · fuzz_manifest.yaml
@@ -73,7 +75,7 @@ Each mutated scene is written out as a self‑contained OpenCOOD case
 
 ### Requirements
 
-`v2x_fuzz.py` itself needs:
+`cps_fuzz.py` itself needs:
 
 ```
 python >= 3.7
@@ -95,7 +97,7 @@ the project's `v2v4real` conda env.
 cd CIRFUZZING
 
 # 1) generate fuzzing cases only (no model inference)
-python v2x_fuzz.py \
+python cps_fuzz.py \
     --model-dir /path/to/opencood/logs/point_pillar_coalign_v2v4real \
     --iterations 50 \
     --process both \
@@ -105,8 +107,8 @@ python v2x_fuzz.py \
     --output-dir ./fuzz_out/run1
 
 # 2) same, but run the model on every candidate and keep only cases that
-#    increase the ego/V2X error over the unmutated baseline
-python v2x_fuzz.py \
+#    increase the ego/collaborator error over the unmutated baseline
+python cps_fuzz.py \
     --model-dir /path/to/opencood/logs/point_pillar_coalign_v2v4real \
     --iterations 50 \
     --process fuzz \
@@ -139,7 +141,7 @@ least one `*epoch*.pth` checkpoint when `--run-inference` is used).
 | `--mutation-region` | `coop_only_outside` | Where candidates may be placed — see below. |
 | `--max-attempts-per-iteration` | `20` | Rejection‑sampling attempts per candidate. |
 | `--fill-delete-shadow` | off | Fill the lidar shadow left by a deleted vehicle. |
-| `--check-non-road-overlap` | off | Reject insertions overlapping coop non‑road points (strict). |
+| `--check-non-road-overlap` | off | Reject insertions overlapping collaborator non‑road points (strict). |
 | `--skip-existing-collision-check` | off | Allow insertions colliding with / occluded by existing YAML vehicles. |
 | `--mesh-path` | auto | Vehicle mesh for insertion (defaults to a ShapeNet mesh under `_assets/`). |
 | `--seed` | `0` | RNG seed. |
@@ -184,11 +186,11 @@ least one `*epoch*.pth` checkpoint when `--run-inference` is used).
 `--mutation-region` selects which road region candidates are drawn from:
 
 - `coop_only_outside` *(default)* — the part of the road that only the
-  cooperative lidar can see; mutations are invisible to the ego sensor, which
+  collaborating lidar can see; mutations are invisible to the ego sensor, which
   is where fusion errors are most likely.
-- `overlap` — the ego/coop overlap region (both insert and delete here).
+- `overlap` — the ego/collaborator overlap region (both insert and delete here).
 - `ego_only` — only the ego‑side files are mutated, in the region only the ego
-  lidar sees; the cooperative side is left untouched.
+  lidar sees; the collaborating side is left untouched.
 
 ### Fitness
 
@@ -199,10 +201,10 @@ error counts; fitness is
 fitness = object_missing + localization_failure
 ```
 
-taken from the `delta_v2x_minus_ego` counts — i.e. how much worse V2X fusion is
-than ego‑only perception on the mutated frame. A case is **interesting** when
-its fitness exceeds the unmutated baseline (or `--fitness-threshold` when no
-baseline is available).
+taken from the `delta_v2x_minus_ego` counts — i.e. how much worse the
+collaborative fusion is than ego‑only perception on the mutated frame. A case is
+**interesting** when its fitness exceeds the unmutated baseline (or
+`--fitness-threshold` when no baseline is available).
 
 ### Outputs
 
@@ -221,8 +223,8 @@ baseline is available).
 
 | File | Role |
 |------|------|
-| `v2x_ops.py` | Point‑cloud primitives: `insert_object`, `delete_object`, `load_point_cloud`, mesh scaling, collision/occlusion checks, road segmentation. |
-| `v2x_outside_ego.py` | Outside‑ego region logic: 3‑way point classification, pose transforms, and a standalone CLI (`python v2x_outside_ego.py`) to prepare/visualise outside‑ego assets. |
+| `cps_ops.py` | Point‑cloud primitives: `insert_object`, `delete_object`, `load_point_cloud`, mesh scaling, collision/occlusion checks, road segmentation. |
+| `cps_outside_ego.py` | Outside‑ego region logic: 3‑way point classification, pose transforms, and a standalone CLI (`python cps_outside_ego.py`) to prepare/visualise outside‑ego assets. |
 | `config/` | Simulator config (`lidar_config.yml`) and dataset path configs used by the helpers. |
 | `core/`, `utils/` | lidar simulation and shared file/point‑cloud utilities. |
 | `dataset/v2x_dataset/` | Small sample dataset (2 agents × 3 frames) for smoke‑testing. |
@@ -236,11 +238,11 @@ road‑segmented dataset using the bundled **SalsaNext** network
 (`dataset_init.py` → `predictions/*.label`). See
 [road_prediction/README.md](road_prediction/README.md) for details.
 
-## 3. `V2V4Real/` — cooperative perception stack
+## 3. `V2V4Real/` — collaborative perception stack
 
-OpenCOOD‑based perception stack (`opencood/`) providing the models, the
-`inference.py --compare_ego_v2x` entry point used by the fuzzer, and the
-`hypes_yaml/` model configs. Code only — checkpoints and logs are excluded.
+OpenCOOD‑based collaborative perception stack (`opencood/`) providing the
+models, the `inference.py --compare_ego_v2x` entry point used by the fuzzer, and
+the `hypes_yaml/` model configs. Code only — checkpoints and logs are excluded.
 
 ---
 

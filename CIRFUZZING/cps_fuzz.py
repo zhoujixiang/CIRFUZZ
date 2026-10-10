@@ -20,8 +20,8 @@ _V2V4REAL_ROOT = _REPO_ROOT / "V2V4Real"
 
 sys.path.insert(0, str(_ROOT))
 
-from v2x_ops import delete_object, insert_object, load_point_cloud 
-from v2x_outside_ego import (  
+from cps_ops import delete_object, insert_object, load_point_cloud 
+from cps_outside_ego import (  
     _DILATION_RADIUS,
     _EGO_CAV_LIDAR_RANGE,
     _ROAD_LABEL_ID,
