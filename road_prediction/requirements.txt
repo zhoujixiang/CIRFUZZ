@@ -2,8 +2,20 @@
 numpy>=1.21.6
 PyYAML>=6.0.1
 
-# Dependencies for the bundled SalsaNext semantic segmentation (third/SalsaNext)
-torch>=1.12.0
-scipy>=1.7.3
-Pillow>=8.0.0
-opencv-python>=4.5.0
+# FRNet semantic segmentation stack (third/FRNet).
+# Install these into a DEDICATED environment, not one that already carries
+# mmcv 1.x (e.g. the OpenCOOD/v2v4real env) — mmcv 2.1.0 replaces it and breaks
+# mmcv.ops users. mmcv and torch-scatter need model/CUDA-specific wheels:
+#
+#   pip install mmengine==0.9.0
+#   pip install mmcv==2.1.0 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.12.0/index.html
+#   pip install mmdet==3.2.0
+#   pip install torch-scatter==2.0.9 -f https://data.pyg.org/whl/torch-1.12.0+cu113.html
+#   pip install mmdet3d==1.3.0
+#
+# (the -f indexes above must match your torch/CUDA build)
+mmengine==0.9.0
+mmcv==2.1.0
+mmdet==3.2.0
+mmdet3d==1.3.0
+torch-scatter==2.0.9

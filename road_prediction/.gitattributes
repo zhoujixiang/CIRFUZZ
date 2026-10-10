@@ -1,5 +1,5 @@
-# V2V4Real/SalsaNext model weight — tracked with Git LFS
-third/SalsaNext/train/tasks/semantic/pretrained/SalsaNext filter=lfs diff=lfs merge=lfs -text
+# FRNet model weight — tracked with Git LFS
+third/FRNet/checkpoints/frnet-semantickitti_seg.pth filter=lfs diff=lfs merge=lfs -text
 
 # Large binary data formats (never commit raw point cloud data)
 *.bin filter=lfs diff=lfs merge=lfs -text

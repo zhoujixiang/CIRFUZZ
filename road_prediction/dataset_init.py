@@ -1,4 +1,5 @@
 import os
+import sys
 import yaml
 import shutil
 import argparse
@@ -6,10 +7,21 @@ import numpy as np
 from glob import glob
 
 
+# Interpreter that has the FRNet stack (mmengine/mmcv/mmdet/mmdet3d/torch-scatter).
+# Override with --frnet-python or the FRNET_PYTHON environment variable.
+DEFAULT_FRNET_PYTHON = os.environ.get(
+    "FRNET_PYTHON",
+    "/home/ustc_user1/miniconda3/envs/frnet/bin/python",
+)
+
+
 def args_parser():
     parser = argparse.ArgumentParser(description="rq1 command")
     parser.add_argument('-d', '--dataset_dir', type=str, required=True,
                         help='Test dataset dir')
+    parser.add_argument('--frnet-python', type=str, default=DEFAULT_FRNET_PYTHON,
+                        help='Python interpreter that has the FRNet mmdet3d stack '
+                             '(default: $FRNET_PYTHON or %s)' % DEFAULT_FRNET_PYTHON)
     args = parser.parse_args()
     return args
 
@@ -92,10 +104,28 @@ if __name__ == '__main__':
     copy_files(ego_bin_dir, des_bin_ego_dir, "bin")
     copy_files(cp_bin_dir, des_bin_cp_dir, "bin")
 
-    cmd1 = "cd ./third/SalsaNext/train/tasks/semantic"
-    cmd2 = f"python infer.py -d '{semantic_dir}/semanticKitti' -m pretrained -l '{semantic_dir}/result' -s test"
+    # Per-point road/semantic segmentation with FRNet (third/FRNet).
+    # The driver writes <result>/sequences/{11,12}/predictions/*.label, the same
+    # layout the previous SalsaNext step produced, so the copy step below is
+    # unchanged. It must run under the FRNet interpreter, not this one.
+    repo_root = os.path.dirname(os.path.abspath(__file__))
+    frnet_repo = os.path.join(repo_root, "third", "FRNet")
+    frnet_driver = os.path.join(repo_root, "tools", "frnet_infer_labels.py")
 
-    os.system(f"{cmd1} && {cmd2}")
+    if not os.path.isfile(frnet_driver):
+        raise SystemExit(f"FRNet inference driver not found: {frnet_driver}")
+
+    cmd = " ".join([
+        f"'{opt.frnet_python}'",
+        f"'{frnet_driver}'",
+        f"--data-root '{semantic_dir}/semanticKitti'",
+        "--sequences 11,12",
+        f"--config '{frnet_repo}/configs/frnet/frnet-semantickitti_seg.py'",
+        f"--checkpoint '{frnet_repo}/checkpoints/frnet-semantickitti_seg.pth'",
+        f"--out-root '{semantic_dir}/result'",
+    ])
+    if os.system(cmd) != 0:
+        raise SystemExit("FRNet inference failed; see output above")
 
     ego_prediction_results = os.path.join(semantic_dir, 'result/sequences/11/predictions/*.label')
     cp_prediction_results = os.path.join(semantic_dir, 'result/sequences/12/predictions/*.label')

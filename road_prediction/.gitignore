@@ -8,10 +8,15 @@ __pycache__/
 
 # Generated dataset outputs (written by dataset_init.py into the dataset root,
 # next to the input -d directory — not under this repo). Root-anchored so the
-# bundled SalsaNext tree under third/SalsaNext/train/tasks/semantic is NOT ignored.
+# vendored FRNet tree under third/FRNet/frnet/ is NOT ignored.
 /dataset/
 /semantic/
 /v2x_dataset/
+
+# FRNet vendored repo: build/runtime artifacts only
+third/FRNet/work_dirs/
+third/FRNet/data/
+third/FRNet/*.egg-info/
 
 # Large data
 *.zip
