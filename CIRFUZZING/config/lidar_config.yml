@@ -1,0 +1,51 @@
+evaluate_angle:
+  1: -25
+  2: -15.639
+  3: -11.31
+  4: -8.843
+  5: -7.254
+  6: -6.148
+  7: -5.333
+  8: -4.667
+  9: -4
+  10: -3.667
+  11: -3.333
+  12: -3
+  13: -2.667
+  14: -2.333
+  15: -2
+  16: -1.667
+  17: -1.333
+  18: -1
+  19: -0.667
+  20: -0.333
+  21: 0
+  22: 0.333
+  23: 0.667
+  24: 1
+  25: 1.333
+  26: 1.667
+  27: 2.333
+  28: 3.333
+  29: 4.667
+  30: 7
+  31: 10.333
+  32: 15
+extend_range: 2
+height_threshold: 1
+horizontal_left: 180
+horizontal_resolution: 0.199
+horizontal_right: -180
+lidar_position: !!python/tuple
+- 0
+- 0
+- 0
+noise:
+  loss_rate: 0.1
+  noise_average: 0
+  noise_severity: 0.1
+  noise_variance: 0.03
+r: 1
+range: 200
+vertical_down: 15
+vertical_up: -25

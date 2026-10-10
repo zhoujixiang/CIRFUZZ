@@ -1,0 +1,7 @@
+# V2V4Real/SalsaNext model weight — tracked with Git LFS
+third/SalsaNext/train/tasks/semantic/pretrained/SalsaNext filter=lfs diff=lfs merge=lfs -text
+
+# Large binary data formats (never commit raw point cloud data)
+*.bin filter=lfs diff=lfs merge=lfs -text
+*.pcd filter=lfs diff=lfs merge=lfs -text
+*.label filter=lfs diff=lfs merge=lfs -text

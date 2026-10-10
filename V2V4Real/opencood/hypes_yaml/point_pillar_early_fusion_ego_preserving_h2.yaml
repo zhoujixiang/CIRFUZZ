@@ -1,0 +1,205 @@
+data_augment:
+- ALONG_AXIS_LIST:
+  - x
+  NAME: random_world_flip
+- NAME: random_world_rotation
+  WORLD_ROT_ANGLE:
+  - -0.78539816
+  - 0.78539816
+- NAME: random_world_scaling
+  WORLD_SCALE_RANGE:
+  - 0.95
+  - 1.05
+fusion:
+  args: []
+  core_method: EarlyFusionDatasetEgoPreserving
+loss:
+  args:
+    cls_margin: 0.02
+    cls_weight: 1.0
+    ego_aux_weight: 0.5
+    ego_negative_thresh: 0.1
+    ego_positive_thresh: 0.3
+    gate_ego_score_thresh: 0.15
+    gate_loss_mode: low_confidence
+    gate_weight: 0.01
+    neg_margin: 0.02
+    # preserve_cls_weight: 0.15
+    # preserve_neg_weight: 0.05
+    # preserve_reg_weight: 0.15
+    preserve_cls_weight: 0.2
+    preserve_neg_weight: 0.1
+    preserve_reg_weight: 0.2
+    protected_pos_strategy: threshold
+    protected_pos_topk_ratio: 0.0
+    reg: 2.0
+    reg_margin: 0.0
+    safe_finite_target: true
+  core_method: point_pillar_ego_consistency_loss_early
+lr_scheduler:
+  core_method: cosineannealwarm
+  epoches: 60
+  lr_min: 1.0e-05
+  warmup_epoches: 15
+  warmup_lr: 0.0001
+model:
+  args:
+    anchor_number: 2
+    base_bev_backbone:
+      layer_nums:
+      - 3
+      - 5
+      - 8
+      layer_strides:
+      - 2
+      - 2
+      - 2
+      num_filters:
+      - 64
+      - 128
+      - 256
+      num_upsample_filter:
+      - 128
+      - 128
+      - 128
+      upsample_strides:
+      - 1
+      - 2
+      - 4
+    compression: 0
+    ego_encoder:
+      base_bev_backbone:
+        layer_nums:
+        - 3
+        - 4
+        - 5
+        layer_strides:
+        - 2
+        - 2
+        - 2
+        num_filters:
+        - 64
+        - 128
+        - 256
+        num_upsample_filter:
+        - 128
+        - 128
+        - 128
+        upsample_strides:
+        - 1
+        - 2
+        - 4
+      pillar_vfe:
+        num_filters:
+        - 64
+        use_absolute_xyz: true
+        use_norm: true
+        with_distance: false
+      point_pillar_scatter:
+        num_features: 64
+    ego_preserving:
+      feature_dim: 256
+      gate_bias_init: 0.0
+      gate_floor: 0.3
+    lidar_range:
+    - -140.8
+    - -40
+    - -5
+    - 140.8
+    - 40
+    - 3
+    pillar_vfe:
+      num_filters:
+      - 64
+      use_absolute_xyz: true
+      use_norm: true
+      with_distance: false
+    point_pillar_scatter:
+      num_features: 64
+    shrink_header:
+      dim:
+      - 256
+      input_dim: 384
+      kernal_size:
+      - 3
+      padding:
+      - 1
+      stride:
+      - 2
+    voxel_size:
+    - 0.4
+    - 0.4
+    - 8
+  core_method: point_pillar_early_ego
+name: point_pillar_early_fusion_ego_preserving_h2
+optimizer:
+  args:
+    eps: 1.0e-10
+    weight_decay: 0.0001
+  core_method: Adam
+  lr: 0.001
+postprocess:
+  anchor_args:
+    D: 1
+    H: 200
+    W: 704
+    cav_lidar_range:
+    - -140.8
+    - -40
+    - -5
+    - 140.8
+    - 40
+    - 3
+    feature_stride: 4
+    h: 1.56
+    l: 3.9
+    num: 2
+    r:
+    - 0
+    - 90
+    vd: 8
+    vh: 0.4
+    vw: 0.4
+    w: 1.6
+  core_method: VoxelPostprocessor
+  max_num: 100
+  nms_thresh: 0.15
+  order: hwl
+  safe_log_eps: 1.0e-06
+  safe_log_target: true
+  target_args:
+    neg_threshold: 0.45
+    pos_threshold: 0.6
+    score_threshold: 0.3
+preprocess:
+  args:
+    max_points_per_voxel: 32
+    max_voxel_test: 70000
+    max_voxel_train: 32000
+    voxel_size:
+    - 0.4
+    - 0.4
+    - 8
+  cav_lidar_range:
+  - -140.8
+  - -40
+  - -5
+  - 140.8
+  - 40
+  - 3
+  core_method: SpVoxelPreprocessor
+root_dir: /bdata3/root/v2x/Data/train
+train_params:
+  batch_size: 4
+  epoches: 60
+  eval_freq: 1
+  save_freq: 1
+validate_dir: /bdata3/root/v2x/Data/val
+wild_setting:
+  async: false
+  async_overhead: 60
+  loc_err: false
+  ryp_std: 0.2
+  seed: 20
+  xyz_std: 0.2
+yaml_parser: load_point_pillar_params

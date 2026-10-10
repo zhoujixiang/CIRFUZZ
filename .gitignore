@@ -1,0 +1,35 @@
+# ---------------------------------------------------------------------------
+# Large data / artifacts deliberately kept out of the repository.
+# These paths are populated at runtime by the tools in this repo.
+# ---------------------------------------------------------------------------
+
+# Trained model checkpoints (~49 GB)
+V2V4Real/model/
+
+# Training / inference logs and tensorboard event files (~108 GB)
+**/logs/
+*.log
+
+# ShapeNet vehicle meshes and asset metadata (~159 MB)
+CIRFUZZING/_assets/
+
+# Generated fuzzing outputs
+CIRFUZZING/fuzz_out/
+**/fuzz_out/
+
+# Python / build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Model weights
+*.pth
+*.ckpt
+
+# Editor / OS noise
+.vscode/
+.idea/
+.DS_Store

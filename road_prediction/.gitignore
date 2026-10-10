@@ -1,0 +1,20 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE / tools
+.vscode/
+.idea/
+
+# Generated dataset outputs (written by dataset_init.py into the dataset root,
+# next to the input -d directory — not under this repo). Root-anchored so the
+# bundled SalsaNext tree under third/SalsaNext/train/tasks/semantic is NOT ignored.
+/dataset/
+/semantic/
+/v2x_dataset/
+
+# Large data
+*.zip
+*.npy
+*.pkl
+*.h5

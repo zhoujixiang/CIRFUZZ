@@ -1,0 +1,9 @@
+# Core runtime dependencies for dataset_init.py
+numpy>=1.21.6
+PyYAML>=6.0.1
+
+# Dependencies for the bundled SalsaNext semantic segmentation (third/SalsaNext)
+torch>=1.12.0
+scipy>=1.7.3
+Pillow>=8.0.0
+opencv-python>=4.5.0

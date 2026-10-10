@@ -1,0 +1,82 @@
+{
+  "overall": {
+    "root": "Data/generated_data_object/CoBEVT_fuzzing_coop",
+    "range": "overall",
+    "iou": "iou_0.70",
+    "valid_cases": 357,
+    "baseline_keys": 50,
+    "compared_cases": 357,
+    "cases_without_inference": 0,
+    "unmatched_valid_cases": 0,
+    "duplicate_baseline_keys": [],
+    "increased_cases": 1,
+    "increased_objects": 1,
+    "valid_total_lost_objects": 80,
+    "baseline_total_lost_objects": 79,
+    "cases": [
+      {
+        "name": "case_000027_step02_delete_s01_001033",
+        "valid_count": 4,
+        "baseline_count": 3,
+        "baseline_case": "case_000027_baseline_001033",
+        "delta": 1
+      }
+    ]
+  },
+  "short": {
+    "root": "Data/generated_data_object/CoBEVT_fuzzing_coop",
+    "range": "short",
+    "iou": "iou_0.70",
+    "valid_cases": 357,
+    "baseline_keys": 50,
+    "compared_cases": 357,
+    "cases_without_inference": 0,
+    "unmatched_valid_cases": 0,
+    "duplicate_baseline_keys": [],
+    "increased_cases": 1,
+    "increased_objects": 1,
+    "valid_total_lost_objects": 12,
+    "baseline_total_lost_objects": 11,
+    "cases": [
+      {
+        "name": "case_000027_step02_delete_s01_001033",
+        "valid_count": 1,
+        "baseline_count": 0,
+        "baseline_case": "case_000027_baseline_001033",
+        "delta": 1
+      }
+    ]
+  },
+  "middle": {
+    "root": "Data/generated_data_object/CoBEVT_fuzzing_coop",
+    "range": "middle",
+    "iou": "iou_0.70",
+    "valid_cases": 357,
+    "baseline_keys": 50,
+    "compared_cases": 357,
+    "cases_without_inference": 0,
+    "unmatched_valid_cases": 0,
+    "duplicate_baseline_keys": [],
+    "increased_cases": 0,
+    "increased_objects": 0,
+    "valid_total_lost_objects": 65,
+    "baseline_total_lost_objects": 65,
+    "cases": []
+  },
+  "long": {
+    "root": "Data/generated_data_object/CoBEVT_fuzzing_coop",
+    "range": "long",
+    "iou": "iou_0.70",
+    "valid_cases": 357,
+    "baseline_keys": 50,
+    "compared_cases": 357,
+    "cases_without_inference": 0,
+    "unmatched_valid_cases": 0,
+    "duplicate_baseline_keys": [],
+    "increased_cases": 0,
+    "increased_objects": 0,
+    "valid_total_lost_objects": 14,
+    "baseline_total_lost_objects": 14,
+    "cases": []
+  }
+}

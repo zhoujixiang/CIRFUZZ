@@ -1,0 +1,336 @@
+{
+  "overall": {
+    "root": "Data/generated_data_object/CoBEVT_fuzzing_overlap",
+    "range": "overall",
+    "iou": "iou_0.70",
+    "valid_cases": 307,
+    "baseline_keys": 17,
+    "compared_cases": 302,
+    "cases_without_inference": 5,
+    "unmatched_valid_cases": 0,
+    "duplicate_baseline_keys": [],
+    "increased_cases": 19,
+    "increased_objects": 20,
+    "valid_total_lost_objects": 193,
+    "baseline_total_lost_objects": 181,
+    "cases": [
+      {
+        "name": "case_000012_step01_insert_s04_001874",
+        "valid_count": 2,
+        "baseline_count": 0,
+        "baseline_case": "case_000012_baseline_001874",
+        "delta": 2
+      },
+      {
+        "name": "case_000000_step02_insert_s02_001696",
+        "valid_count": 3,
+        "baseline_count": 2,
+        "baseline_case": "case_000000_baseline_001696",
+        "delta": 1
+      },
+      {
+        "name": "case_000000_step03_insert_s00_001696",
+        "valid_count": 3,
+        "baseline_count": 2,
+        "baseline_case": "case_000000_baseline_001696",
+        "delta": 1
+      },
+      {
+        "name": "case_000000_step04_insert_s00_001696",
+        "valid_count": 3,
+        "baseline_count": 2,
+        "baseline_case": "case_000000_baseline_001696",
+        "delta": 1
+      },
+      {
+        "name": "case_000001_step01_insert_s02_001826",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000001_baseline_001826",
+        "delta": 1
+      },
+      {
+        "name": "case_000001_step02_insert_s01_001826",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000001_baseline_001826",
+        "delta": 1
+      },
+      {
+        "name": "case_000001_step03_insert_s02_001826",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000001_baseline_001826",
+        "delta": 1
+      },
+      {
+        "name": "case_000001_step03_insert_s04_001826",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000001_baseline_001826",
+        "delta": 1
+      },
+      {
+        "name": "case_000001_step04_insert_s01_001826",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000001_baseline_001826",
+        "delta": 1
+      },
+      {
+        "name": "case_000004_step02_insert_s00_001906",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000004_baseline_001906",
+        "delta": 1
+      },
+      {
+        "name": "case_000004_step03_insert_s00_001906",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000004_baseline_001906",
+        "delta": 1
+      },
+      {
+        "name": "case_000004_step04_insert_s03_001906",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000004_baseline_001906",
+        "delta": 1
+      },
+      {
+        "name": "case_000005_step04_insert_s03_001087",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000005_baseline_001087",
+        "delta": 1
+      },
+      {
+        "name": "case_000009_step04_insert_s00_001660",
+        "valid_count": 1,
+        "baseline_count": 0,
+        "baseline_case": "case_000009_baseline_001660",
+        "delta": 1
+      },
+      {
+        "name": "case_000010_step02_insert_s02_001330",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000010_baseline_001330",
+        "delta": 1
+      },
+      {
+        "name": "case_000012_step03_insert_s01_001874",
+        "valid_count": 1,
+        "baseline_count": 0,
+        "baseline_case": "case_000012_baseline_001874",
+        "delta": 1
+      },
+      {
+        "name": "case_000012_step03_insert_s02_001874",
+        "valid_count": 1,
+        "baseline_count": 0,
+        "baseline_case": "case_000012_baseline_001874",
+        "delta": 1
+      },
+      {
+        "name": "case_000013_step01_insert_s01_001751",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000013_baseline_001751",
+        "delta": 1
+      },
+      {
+        "name": "case_000014_step03_insert_s00_000899",
+        "valid_count": 1,
+        "baseline_count": 0,
+        "baseline_case": "case_000014_baseline_000899",
+        "delta": 1
+      }
+    ]
+  },
+  "short": {
+    "root": "Data/generated_data_object/CoBEVT_fuzzing_overlap",
+    "range": "short",
+    "iou": "iou_0.70",
+    "valid_cases": 307,
+    "baseline_keys": 17,
+    "compared_cases": 302,
+    "cases_without_inference": 5,
+    "unmatched_valid_cases": 0,
+    "duplicate_baseline_keys": [],
+    "increased_cases": 16,
+    "increased_objects": 17,
+    "valid_total_lost_objects": 123,
+    "baseline_total_lost_objects": 108,
+    "cases": [
+      {
+        "name": "case_000012_step01_insert_s04_001874",
+        "valid_count": 2,
+        "baseline_count": 0,
+        "baseline_case": "case_000012_baseline_001874",
+        "delta": 2
+      },
+      {
+        "name": "case_000000_step02_insert_s02_001696",
+        "valid_count": 3,
+        "baseline_count": 2,
+        "baseline_case": "case_000000_baseline_001696",
+        "delta": 1
+      },
+      {
+        "name": "case_000000_step03_insert_s00_001696",
+        "valid_count": 3,
+        "baseline_count": 2,
+        "baseline_case": "case_000000_baseline_001696",
+        "delta": 1
+      },
+      {
+        "name": "case_000000_step04_insert_s00_001696",
+        "valid_count": 3,
+        "baseline_count": 2,
+        "baseline_case": "case_000000_baseline_001696",
+        "delta": 1
+      },
+      {
+        "name": "case_000001_step01_insert_s02_001826",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000001_baseline_001826",
+        "delta": 1
+      },
+      {
+        "name": "case_000001_step02_insert_s01_001826",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000001_baseline_001826",
+        "delta": 1
+      },
+      {
+        "name": "case_000001_step03_insert_s02_001826",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000001_baseline_001826",
+        "delta": 1
+      },
+      {
+        "name": "case_000001_step03_insert_s04_001826",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000001_baseline_001826",
+        "delta": 1
+      },
+      {
+        "name": "case_000001_step04_insert_s01_001826",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000001_baseline_001826",
+        "delta": 1
+      },
+      {
+        "name": "case_000004_step02_insert_s00_001906",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000004_baseline_001906",
+        "delta": 1
+      },
+      {
+        "name": "case_000004_step03_insert_s00_001906",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000004_baseline_001906",
+        "delta": 1
+      },
+      {
+        "name": "case_000004_step04_insert_s03_001906",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000004_baseline_001906",
+        "delta": 1
+      },
+      {
+        "name": "case_000012_step03_insert_s01_001874",
+        "valid_count": 1,
+        "baseline_count": 0,
+        "baseline_case": "case_000012_baseline_001874",
+        "delta": 1
+      },
+      {
+        "name": "case_000012_step03_insert_s02_001874",
+        "valid_count": 1,
+        "baseline_count": 0,
+        "baseline_case": "case_000012_baseline_001874",
+        "delta": 1
+      },
+      {
+        "name": "case_000013_step01_insert_s01_001751",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000013_baseline_001751",
+        "delta": 1
+      },
+      {
+        "name": "case_000014_step03_insert_s00_000899",
+        "valid_count": 1,
+        "baseline_count": 0,
+        "baseline_case": "case_000014_baseline_000899",
+        "delta": 1
+      }
+    ]
+  },
+  "middle": {
+    "root": "Data/generated_data_object/CoBEVT_fuzzing_overlap",
+    "range": "middle",
+    "iou": "iou_0.70",
+    "valid_cases": 307,
+    "baseline_keys": 17,
+    "compared_cases": 302,
+    "cases_without_inference": 5,
+    "unmatched_valid_cases": 0,
+    "duplicate_baseline_keys": [],
+    "increased_cases": 1,
+    "increased_objects": 1,
+    "valid_total_lost_objects": 40,
+    "baseline_total_lost_objects": 50,
+    "cases": [
+      {
+        "name": "case_000009_step04_insert_s00_001660",
+        "valid_count": 1,
+        "baseline_count": 0,
+        "baseline_case": "case_000009_baseline_001660",
+        "delta": 1
+      }
+    ]
+  },
+  "long": {
+    "root": "Data/generated_data_object/CoBEVT_fuzzing_overlap",
+    "range": "long",
+    "iou": "iou_0.70",
+    "valid_cases": 307,
+    "baseline_keys": 17,
+    "compared_cases": 302,
+    "cases_without_inference": 5,
+    "unmatched_valid_cases": 0,
+    "duplicate_baseline_keys": [],
+    "increased_cases": 2,
+    "increased_objects": 2,
+    "valid_total_lost_objects": 34,
+    "baseline_total_lost_objects": 38,
+    "cases": [
+      {
+        "name": "case_000005_step04_insert_s03_001087",
+        "valid_count": 1,
+        "baseline_count": 0,
+        "baseline_case": "case_000005_baseline_001087",
+        "delta": 1
+      },
+      {
+        "name": "case_000010_step02_insert_s02_001330",
+        "valid_count": 2,
+        "baseline_count": 1,
+        "baseline_case": "case_000010_baseline_001330",
+        "delta": 1
+      }
+    ]
+  }
+}

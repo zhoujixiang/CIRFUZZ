@@ -1,0 +1,2811 @@
+{
+  "CoBEVT_fuzzing_overlap": {
+    "root": "Data/generated_data_object/CoBEVT_fuzzing_overlap",
+    "dataset": "CoBEVT_fuzzing_overlap",
+    "iou": "iou_0.70",
+    "ranges": {
+      "overall": {
+        "cases": {
+          "fuzz": 58,
+          "random": 0
+        },
+        "objs": {
+          "fuzz": 427,
+          "random": 0
+        },
+        "no_inference": {
+          "fuzz": 0,
+          "random": 0
+        },
+        "unmatched": {
+          "fuzz": 0,
+          "random": 0
+        },
+        "valid_total": {
+          "fuzz": 907,
+          "random": 0
+        },
+        "baseline_total": {
+          "fuzz": 438,
+          "random": 0
+        },
+        "detail": [
+          {
+            "name": "case_000000_step02_insert_s02_001696",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_baseline_001696"
+          },
+          {
+            "name": "case_000000_step03_insert_s00_001696",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_baseline_001696"
+          },
+          {
+            "name": "case_000000_step04_insert_s00_001696",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_baseline_001696"
+          },
+          {
+            "name": "case_000001_step01_insert_s02_001826",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001826"
+          },
+          {
+            "name": "case_000001_step02_insert_s01_001826",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001826"
+          },
+          {
+            "name": "case_000001_step03_insert_s02_001826",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001826"
+          },
+          {
+            "name": "case_000001_step03_insert_s04_001826",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001826"
+          },
+          {
+            "name": "case_000001_step04_insert_s01_001826",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001826"
+          },
+          {
+            "name": "case_000004_step02_insert_s00_001906",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000004_baseline_001906"
+          },
+          {
+            "name": "case_000004_step03_insert_s00_001906",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000004_baseline_001906"
+          },
+          {
+            "name": "case_000004_step04_insert_s03_001906",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000004_baseline_001906"
+          },
+          {
+            "name": "case_000005_step04_insert_s03_001087",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000005_baseline_001087"
+          },
+          {
+            "name": "case_000009_step04_insert_s00_001660",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000009_baseline_001660"
+          },
+          {
+            "name": "case_000010_step02_insert_s02_001330",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000010_baseline_001330"
+          },
+          {
+            "name": "case_000012_step01_insert_s04_001874",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 0,
+            "delta": 2,
+            "baseline_case": "case_000012_baseline_001874"
+          },
+          {
+            "name": "case_000012_step03_insert_s01_001874",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000012_baseline_001874"
+          },
+          {
+            "name": "case_000012_step03_insert_s02_001874",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000012_baseline_001874"
+          },
+          {
+            "name": "case_000013_step01_insert_s01_001751",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_baseline_001751"
+          },
+          {
+            "name": "case_000014_step03_insert_s00_000899",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000014_baseline_000899"
+          },
+          {
+            "name": "case_000017_step04_insert_s02_000970",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000017_baseline_000970"
+          },
+          {
+            "name": "case_000018_step03_insert_s02_001869",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000018_baseline_001869"
+          },
+          {
+            "name": "case_000020_step04_insert_s01_001025",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000020_baseline_001025"
+          },
+          {
+            "name": "case_000022_step02_insert_s00_000933",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000022_baseline_000933"
+          },
+          {
+            "name": "case_000022_step02_insert_s01_000933",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000022_baseline_000933"
+          },
+          {
+            "name": "case_000022_step02_insert_s04_000933",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000022_baseline_000933"
+          },
+          {
+            "name": "case_000022_step03_insert_s02_000933",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000022_baseline_000933"
+          },
+          {
+            "name": "case_000022_step03_insert_s03_000933",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000022_baseline_000933"
+          },
+          {
+            "name": "case_000022_step03_insert_s04_000933",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000022_baseline_000933"
+          },
+          {
+            "name": "case_000027_step02_insert_s00_001928",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000027_baseline_001928"
+          },
+          {
+            "name": "case_000027_step03_insert_s04_001928",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000027_baseline_001928"
+          },
+          {
+            "name": "case_000028_step02_insert_s00_000558",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000028_baseline_000558"
+          },
+          {
+            "name": "case_000028_step03_insert_s00_000558",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000028_baseline_000558"
+          },
+          {
+            "name": "case_000028_step03_insert_s01_000558",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000028_baseline_000558"
+          },
+          {
+            "name": "case_000028_step03_insert_s02_000558",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000028_baseline_000558"
+          },
+          {
+            "name": "case_000028_step03_insert_s03_000558",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000028_baseline_000558"
+          },
+          {
+            "name": "case_000028_step03_insert_s04_000558",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000028_baseline_000558"
+          },
+          {
+            "name": "case_000028_step04_insert_s02_000558",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000028_baseline_000558"
+          },
+          {
+            "name": "case_000028_step04_insert_s03_000558",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000028_baseline_000558"
+          },
+          {
+            "name": "case_000028_step04_insert_s04_000558",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000028_baseline_000558"
+          },
+          {
+            "name": "case_000030_step03_insert_s00_000426",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000030_baseline_000426"
+          },
+          {
+            "name": "case_000036_step01_insert_s04_001741",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000036_baseline_001741"
+          },
+          {
+            "name": "case_000036_step03_insert_s01_001741",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000036_baseline_001741"
+          },
+          {
+            "name": "case_000036_step03_insert_s02_001741",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000036_baseline_001741"
+          },
+          {
+            "name": "case_000036_step04_insert_s01_001741",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000036_baseline_001741"
+          },
+          {
+            "name": "case_000041_step01_insert_s00_001913",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000041_baseline_001913"
+          },
+          {
+            "name": "case_000041_step02_insert_s00_001913",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000041_baseline_001913"
+          },
+          {
+            "name": "case_000041_step02_insert_s03_001913",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000041_baseline_001913"
+          },
+          {
+            "name": "case_000041_step03_insert_s00_001913",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000041_baseline_001913"
+          },
+          {
+            "name": "case_000041_step03_insert_s01_001913",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000041_baseline_001913"
+          },
+          {
+            "name": "case_000041_step04_insert_s00_001913",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000041_baseline_001913"
+          },
+          {
+            "name": "case_000041_step04_insert_s03_001913",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000041_baseline_001913"
+          },
+          {
+            "name": "case_000044_step01_insert_s01_001491",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000044_baseline_001491"
+          },
+          {
+            "name": "case_000044_step02_insert_s00_001491",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000044_baseline_001491"
+          },
+          {
+            "name": "case_000044_step02_insert_s02_001491",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000044_baseline_001491"
+          },
+          {
+            "name": "case_000044_step02_insert_s03_001491",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000044_baseline_001491"
+          },
+          {
+            "name": "case_000044_step03_insert_s00_001491",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000044_baseline_001491"
+          },
+          {
+            "name": "case_000044_step03_insert_s01_001491",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000044_baseline_001491"
+          },
+          {
+            "name": "case_000044_step04_insert_s00_001491",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000044_baseline_001491"
+          }
+        ]
+      },
+      "short": {
+        "cases": {
+          "fuzz": 43,
+          "random": 0
+        },
+        "objs": {
+          "fuzz": 305,
+          "random": 0
+        },
+        "no_inference": {
+          "fuzz": 0,
+          "random": 0
+        },
+        "unmatched": {
+          "fuzz": 0,
+          "random": 0
+        },
+        "valid_total": {
+          "fuzz": 907,
+          "random": 0
+        },
+        "baseline_total": {
+          "fuzz": 312,
+          "random": 0
+        },
+        "detail": [
+          {
+            "name": "case_000000_step02_insert_s02_001696",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_baseline_001696"
+          },
+          {
+            "name": "case_000000_step03_insert_s00_001696",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_baseline_001696"
+          },
+          {
+            "name": "case_000000_step04_insert_s00_001696",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_baseline_001696"
+          },
+          {
+            "name": "case_000001_step01_insert_s02_001826",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001826"
+          },
+          {
+            "name": "case_000001_step02_insert_s01_001826",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001826"
+          },
+          {
+            "name": "case_000001_step03_insert_s02_001826",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001826"
+          },
+          {
+            "name": "case_000001_step03_insert_s04_001826",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001826"
+          },
+          {
+            "name": "case_000001_step04_insert_s01_001826",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001826"
+          },
+          {
+            "name": "case_000004_step02_insert_s00_001906",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000004_baseline_001906"
+          },
+          {
+            "name": "case_000004_step03_insert_s00_001906",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000004_baseline_001906"
+          },
+          {
+            "name": "case_000004_step04_insert_s03_001906",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000004_baseline_001906"
+          },
+          {
+            "name": "case_000012_step01_insert_s04_001874",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 0,
+            "delta": 2,
+            "baseline_case": "case_000012_baseline_001874"
+          },
+          {
+            "name": "case_000012_step03_insert_s01_001874",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000012_baseline_001874"
+          },
+          {
+            "name": "case_000012_step03_insert_s02_001874",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000012_baseline_001874"
+          },
+          {
+            "name": "case_000013_step01_insert_s01_001751",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_baseline_001751"
+          },
+          {
+            "name": "case_000014_step03_insert_s00_000899",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000014_baseline_000899"
+          },
+          {
+            "name": "case_000018_step03_insert_s02_001869",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000018_baseline_001869"
+          },
+          {
+            "name": "case_000022_step02_insert_s00_000933",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000022_baseline_000933"
+          },
+          {
+            "name": "case_000022_step02_insert_s01_000933",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000022_baseline_000933"
+          },
+          {
+            "name": "case_000022_step02_insert_s04_000933",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000022_baseline_000933"
+          },
+          {
+            "name": "case_000022_step03_insert_s02_000933",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000022_baseline_000933"
+          },
+          {
+            "name": "case_000022_step03_insert_s03_000933",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000022_baseline_000933"
+          },
+          {
+            "name": "case_000022_step03_insert_s04_000933",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000022_baseline_000933"
+          },
+          {
+            "name": "case_000027_step02_insert_s00_001928",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000027_baseline_001928"
+          },
+          {
+            "name": "case_000027_step03_insert_s04_001928",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000027_baseline_001928"
+          },
+          {
+            "name": "case_000036_step01_insert_s04_001741",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000036_baseline_001741"
+          },
+          {
+            "name": "case_000036_step03_insert_s01_001741",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000036_baseline_001741"
+          },
+          {
+            "name": "case_000036_step03_insert_s02_001741",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000036_baseline_001741"
+          },
+          {
+            "name": "case_000036_step04_insert_s01_001741",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000036_baseline_001741"
+          },
+          {
+            "name": "case_000041_step01_insert_s00_001913",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000041_baseline_001913"
+          },
+          {
+            "name": "case_000041_step02_insert_s00_001913",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000041_baseline_001913"
+          },
+          {
+            "name": "case_000041_step02_insert_s03_001913",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000041_baseline_001913"
+          },
+          {
+            "name": "case_000041_step03_insert_s00_001913",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000041_baseline_001913"
+          },
+          {
+            "name": "case_000041_step03_insert_s01_001913",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000041_baseline_001913"
+          },
+          {
+            "name": "case_000041_step04_insert_s00_001913",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000041_baseline_001913"
+          },
+          {
+            "name": "case_000041_step04_insert_s03_001913",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000041_baseline_001913"
+          },
+          {
+            "name": "case_000044_step01_insert_s01_001491",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000044_baseline_001491"
+          },
+          {
+            "name": "case_000044_step02_insert_s00_001491",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000044_baseline_001491"
+          },
+          {
+            "name": "case_000044_step02_insert_s02_001491",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000044_baseline_001491"
+          },
+          {
+            "name": "case_000044_step02_insert_s03_001491",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000044_baseline_001491"
+          },
+          {
+            "name": "case_000044_step03_insert_s00_001491",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000044_baseline_001491"
+          },
+          {
+            "name": "case_000044_step03_insert_s01_001491",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000044_baseline_001491"
+          },
+          {
+            "name": "case_000044_step04_insert_s00_001491",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000044_baseline_001491"
+          }
+        ]
+      },
+      "middle": {
+        "cases": {
+          "fuzz": 3,
+          "random": 0
+        },
+        "objs": {
+          "fuzz": 67,
+          "random": 0
+        },
+        "no_inference": {
+          "fuzz": 0,
+          "random": 0
+        },
+        "unmatched": {
+          "fuzz": 0,
+          "random": 0
+        },
+        "valid_total": {
+          "fuzz": 907,
+          "random": 0
+        },
+        "baseline_total": {
+          "fuzz": 88,
+          "random": 0
+        },
+        "detail": [
+          {
+            "name": "case_000009_step04_insert_s00_001660",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000009_baseline_001660"
+          },
+          {
+            "name": "case_000017_step04_insert_s02_000970",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000017_baseline_000970"
+          },
+          {
+            "name": "case_000030_step03_insert_s00_000426",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000030_baseline_000426"
+          }
+        ]
+      },
+      "long": {
+        "cases": {
+          "fuzz": 12,
+          "random": 0
+        },
+        "objs": {
+          "fuzz": 59,
+          "random": 0
+        },
+        "no_inference": {
+          "fuzz": 0,
+          "random": 0
+        },
+        "unmatched": {
+          "fuzz": 0,
+          "random": 0
+        },
+        "valid_total": {
+          "fuzz": 907,
+          "random": 0
+        },
+        "baseline_total": {
+          "fuzz": 53,
+          "random": 0
+        },
+        "detail": [
+          {
+            "name": "case_000005_step04_insert_s03_001087",
+            "process": "fuzz",
+            "range": "long",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000005_baseline_001087"
+          },
+          {
+            "name": "case_000010_step02_insert_s02_001330",
+            "process": "fuzz",
+            "range": "long",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000010_baseline_001330"
+          },
+          {
+            "name": "case_000020_step04_insert_s01_001025",
+            "process": "fuzz",
+            "range": "long",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000020_baseline_001025"
+          },
+          {
+            "name": "case_000028_step02_insert_s00_000558",
+            "process": "fuzz",
+            "range": "long",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000028_baseline_000558"
+          },
+          {
+            "name": "case_000028_step03_insert_s00_000558",
+            "process": "fuzz",
+            "range": "long",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000028_baseline_000558"
+          },
+          {
+            "name": "case_000028_step03_insert_s01_000558",
+            "process": "fuzz",
+            "range": "long",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000028_baseline_000558"
+          },
+          {
+            "name": "case_000028_step03_insert_s02_000558",
+            "process": "fuzz",
+            "range": "long",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000028_baseline_000558"
+          },
+          {
+            "name": "case_000028_step03_insert_s03_000558",
+            "process": "fuzz",
+            "range": "long",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000028_baseline_000558"
+          },
+          {
+            "name": "case_000028_step03_insert_s04_000558",
+            "process": "fuzz",
+            "range": "long",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000028_baseline_000558"
+          },
+          {
+            "name": "case_000028_step04_insert_s02_000558",
+            "process": "fuzz",
+            "range": "long",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000028_baseline_000558"
+          },
+          {
+            "name": "case_000028_step04_insert_s03_000558",
+            "process": "fuzz",
+            "range": "long",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000028_baseline_000558"
+          },
+          {
+            "name": "case_000028_step04_insert_s04_000558",
+            "process": "fuzz",
+            "range": "long",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000028_baseline_000558"
+          }
+        ]
+      }
+    },
+    "duplicate_baseline_keys": [],
+    "valid_cases": 907,
+    "baseline_keys": 50
+  },
+  "CoBEVT_fuzzing_overlap_both": {
+    "root": "Data/generated_data_object/CoBEVT_fuzzing_overlap_both",
+    "dataset": "CoBEVT_fuzzing_overlap_both",
+    "iou": "iou_0.70",
+    "ranges": {
+      "overall": {
+        "cases": {
+          "fuzz": 35,
+          "random": 44
+        },
+        "objs": {
+          "fuzz": 200,
+          "random": 265
+        },
+        "no_inference": {
+          "fuzz": 0,
+          "random": 0
+        },
+        "unmatched": {
+          "fuzz": 18,
+          "random": 0
+        },
+        "valid_total": {
+          "fuzz": 444,
+          "random": 405
+        },
+        "baseline_total": {
+          "fuzz": 197,
+          "random": 231
+        },
+        "detail": [
+          {
+            "name": "case_000000_random_step01_insert_s00_001696",
+            "process": "random",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_random_baseline_001696"
+          },
+          {
+            "name": "case_000000_random_step01_insert_s01_001696",
+            "process": "random",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_random_baseline_001696"
+          },
+          {
+            "name": "case_000000_random_step01_insert_s02_001696",
+            "process": "random",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_random_baseline_001696"
+          },
+          {
+            "name": "case_000000_random_step01_insert_s04_001696",
+            "process": "random",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_random_baseline_001696"
+          },
+          {
+            "name": "case_000000_random_step02_insert_s02_001696",
+            "process": "random",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_random_baseline_001696"
+          },
+          {
+            "name": "case_000000_random_step03_insert_s00_001696",
+            "process": "random",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_random_baseline_001696"
+          },
+          {
+            "name": "case_000000_random_step04_insert_s03_001696",
+            "process": "random",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_random_baseline_001696"
+          },
+          {
+            "name": "case_000001_random_step01_insert_s01_001392",
+            "process": "random",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000001_random_baseline_001392"
+          },
+          {
+            "name": "case_000001_random_step01_insert_s03_001392",
+            "process": "random",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000001_random_baseline_001392"
+          },
+          {
+            "name": "case_000001_random_step03_insert_s01_001392",
+            "process": "random",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000001_random_baseline_001392"
+          },
+          {
+            "name": "case_000001_step01_insert_s01_001392",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001392"
+          },
+          {
+            "name": "case_000001_step02_insert_s00_001392",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001392"
+          },
+          {
+            "name": "case_000001_step02_insert_s01_001392",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001392"
+          },
+          {
+            "name": "case_000001_step02_insert_s04_001392",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001392"
+          },
+          {
+            "name": "case_000001_step03_insert_s00_001392",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001392"
+          },
+          {
+            "name": "case_000001_step03_insert_s03_001392",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001392"
+          },
+          {
+            "name": "case_000004_random_step04_insert_s01_000544",
+            "process": "random",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000004_random_baseline_000544"
+          },
+          {
+            "name": "case_000004_step01_insert_s02_000544",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000004_baseline_000544"
+          },
+          {
+            "name": "case_000004_step01_insert_s03_000544",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000004_baseline_000544"
+          },
+          {
+            "name": "case_000004_step01_insert_s04_000544",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000004_baseline_000544"
+          },
+          {
+            "name": "case_000004_step02_insert_s00_000544",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000004_baseline_000544"
+          },
+          {
+            "name": "case_000004_step03_insert_s01_000544",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000004_baseline_000544"
+          },
+          {
+            "name": "case_000004_step04_insert_s02_000544",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000004_baseline_000544"
+          },
+          {
+            "name": "case_000008_random_step01_insert_s01_000780",
+            "process": "random",
+            "range": "overall",
+            "valid": 4,
+            "baseline": 3,
+            "delta": 1,
+            "baseline_case": "case_000008_random_baseline_000780"
+          },
+          {
+            "name": "case_000008_random_step02_delete_s01_000780",
+            "process": "random",
+            "range": "overall",
+            "valid": 4,
+            "baseline": 3,
+            "delta": 1,
+            "baseline_case": "case_000008_random_baseline_000780"
+          },
+          {
+            "name": "case_000010_random_step02_insert_s01_001916",
+            "process": "random",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000010_random_baseline_001916"
+          },
+          {
+            "name": "case_000010_step02_insert_s03_001916",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000010_baseline_001916"
+          },
+          {
+            "name": "case_000010_step03_insert_s01_001916",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000010_baseline_001916"
+          },
+          {
+            "name": "case_000011_step01_insert_s03_000493",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000011_baseline_000493"
+          },
+          {
+            "name": "case_000011_step03_insert_s03_000493",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000011_baseline_000493"
+          },
+          {
+            "name": "case_000011_step03_insert_s04_000493",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000011_baseline_000493"
+          },
+          {
+            "name": "case_000011_step04_insert_s00_000493",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000011_baseline_000493"
+          },
+          {
+            "name": "case_000011_step04_insert_s01_000493",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000011_baseline_000493"
+          },
+          {
+            "name": "case_000013_random_step01_insert_s00_000719",
+            "process": "random",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_random_baseline_000719"
+          },
+          {
+            "name": "case_000013_random_step01_insert_s01_000719",
+            "process": "random",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_random_baseline_000719"
+          },
+          {
+            "name": "case_000013_random_step02_insert_s01_000719",
+            "process": "random",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_random_baseline_000719"
+          },
+          {
+            "name": "case_000013_random_step02_insert_s03_000719",
+            "process": "random",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_random_baseline_000719"
+          },
+          {
+            "name": "case_000013_random_step03_insert_s00_000719",
+            "process": "random",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_random_baseline_000719"
+          },
+          {
+            "name": "case_000013_random_step03_insert_s02_000719",
+            "process": "random",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_random_baseline_000719"
+          },
+          {
+            "name": "case_000013_random_step03_insert_s03_000719",
+            "process": "random",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_random_baseline_000719"
+          },
+          {
+            "name": "case_000013_step01_insert_s02_000719",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_baseline_000719"
+          },
+          {
+            "name": "case_000013_step02_insert_s01_000719",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_baseline_000719"
+          },
+          {
+            "name": "case_000013_step02_insert_s03_000719",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_baseline_000719"
+          },
+          {
+            "name": "case_000014_step02_insert_s03_001641",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000014_baseline_001641"
+          },
+          {
+            "name": "case_000015_random_step01_insert_s03_000814",
+            "process": "random",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step02_insert_s00_000814",
+            "process": "random",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step02_insert_s03_000814",
+            "process": "random",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step02_insert_s04_000814",
+            "process": "random",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step03_insert_s01_000814",
+            "process": "random",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 1,
+            "delta": 2,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step03_insert_s02_000814",
+            "process": "random",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step03_insert_s04_000814",
+            "process": "random",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step04_insert_s01_000814",
+            "process": "random",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step04_insert_s02_000814",
+            "process": "random",
+            "range": "overall",
+            "valid": 4,
+            "baseline": 1,
+            "delta": 3,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step04_insert_s03_000814",
+            "process": "random",
+            "range": "overall",
+            "valid": 3,
+            "baseline": 1,
+            "delta": 2,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_step02_insert_s03_000814",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000015_baseline_000814"
+          },
+          {
+            "name": "case_000015_step04_insert_s02_000814",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000015_baseline_000814"
+          },
+          {
+            "name": "case_000016_random_step01_insert_s04_001715",
+            "process": "random",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000016_random_baseline_001715"
+          },
+          {
+            "name": "case_000016_step02_insert_s03_001715",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000016_baseline_001715"
+          },
+          {
+            "name": "case_000016_step03_insert_s00_001715",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000016_baseline_001715"
+          },
+          {
+            "name": "case_000019_step01_insert_s03_001866",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000019_baseline_001866"
+          },
+          {
+            "name": "case_000022_random_step04_insert_s01_000720",
+            "process": "random",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000022_random_baseline_000720"
+          },
+          {
+            "name": "case_000022_step01_insert_s00_000720",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000022_baseline_000720"
+          },
+          {
+            "name": "case_000023_random_step01_insert_s00_000996",
+            "process": "random",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step01_insert_s03_000996",
+            "process": "random",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step02_insert_s00_000996",
+            "process": "random",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step02_insert_s01_000996",
+            "process": "random",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step02_insert_s02_000996",
+            "process": "random",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step02_insert_s03_000996",
+            "process": "random",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step02_insert_s04_000996",
+            "process": "random",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step03_insert_s01_000996",
+            "process": "random",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step03_insert_s02_000996",
+            "process": "random",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step03_insert_s03_000996",
+            "process": "random",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step04_insert_s00_000996",
+            "process": "random",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_step01_insert_s03_000996",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_baseline_000996"
+          },
+          {
+            "name": "case_000023_step02_insert_s00_000996",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_baseline_000996"
+          },
+          {
+            "name": "case_000023_step03_insert_s03_000996",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_baseline_000996"
+          },
+          {
+            "name": "case_000023_step04_insert_s00_000996",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_baseline_000996"
+          },
+          {
+            "name": "case_000023_step04_insert_s01_000996",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_baseline_000996"
+          },
+          {
+            "name": "case_000023_step04_insert_s02_000996",
+            "process": "fuzz",
+            "range": "overall",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_baseline_000996"
+          }
+        ]
+      },
+      "short": {
+        "cases": {
+          "fuzz": 20,
+          "random": 29
+        },
+        "objs": {
+          "fuzz": 151,
+          "random": 216
+        },
+        "no_inference": {
+          "fuzz": 0,
+          "random": 0
+        },
+        "unmatched": {
+          "fuzz": 18,
+          "random": 0
+        },
+        "valid_total": {
+          "fuzz": 444,
+          "random": 405
+        },
+        "baseline_total": {
+          "fuzz": 162,
+          "random": 200
+        },
+        "detail": [
+          {
+            "name": "case_000000_random_step01_insert_s00_001696",
+            "process": "random",
+            "range": "short",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_random_baseline_001696"
+          },
+          {
+            "name": "case_000000_random_step01_insert_s01_001696",
+            "process": "random",
+            "range": "short",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_random_baseline_001696"
+          },
+          {
+            "name": "case_000000_random_step01_insert_s02_001696",
+            "process": "random",
+            "range": "short",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_random_baseline_001696"
+          },
+          {
+            "name": "case_000000_random_step01_insert_s04_001696",
+            "process": "random",
+            "range": "short",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_random_baseline_001696"
+          },
+          {
+            "name": "case_000000_random_step02_insert_s02_001696",
+            "process": "random",
+            "range": "short",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_random_baseline_001696"
+          },
+          {
+            "name": "case_000000_random_step03_insert_s00_001696",
+            "process": "random",
+            "range": "short",
+            "valid": 3,
+            "baseline": 2,
+            "delta": 1,
+            "baseline_case": "case_000000_random_baseline_001696"
+          },
+          {
+            "name": "case_000001_random_step01_insert_s01_001392",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_random_baseline_001392"
+          },
+          {
+            "name": "case_000001_random_step01_insert_s03_001392",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_random_baseline_001392"
+          },
+          {
+            "name": "case_000001_random_step03_insert_s01_001392",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_random_baseline_001392"
+          },
+          {
+            "name": "case_000001_step01_insert_s01_001392",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001392"
+          },
+          {
+            "name": "case_000001_step02_insert_s00_001392",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001392"
+          },
+          {
+            "name": "case_000001_step02_insert_s01_001392",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001392"
+          },
+          {
+            "name": "case_000001_step02_insert_s02_001392",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001392"
+          },
+          {
+            "name": "case_000001_step02_insert_s04_001392",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001392"
+          },
+          {
+            "name": "case_000001_step03_insert_s00_001392",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001392"
+          },
+          {
+            "name": "case_000001_step03_insert_s03_001392",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001392"
+          },
+          {
+            "name": "case_000001_step04_insert_s00_001392",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001392"
+          },
+          {
+            "name": "case_000001_step04_insert_s01_001392",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001392"
+          },
+          {
+            "name": "case_000001_step04_insert_s02_001392",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000001_baseline_001392"
+          },
+          {
+            "name": "case_000010_random_step02_insert_s01_001916",
+            "process": "random",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000010_random_baseline_001916"
+          },
+          {
+            "name": "case_000010_step02_insert_s03_001916",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000010_baseline_001916"
+          },
+          {
+            "name": "case_000010_step03_insert_s01_001916",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000010_baseline_001916"
+          },
+          {
+            "name": "case_000013_random_step01_insert_s00_000719",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_random_baseline_000719"
+          },
+          {
+            "name": "case_000013_random_step01_insert_s01_000719",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_random_baseline_000719"
+          },
+          {
+            "name": "case_000013_random_step02_insert_s01_000719",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_random_baseline_000719"
+          },
+          {
+            "name": "case_000013_random_step02_insert_s03_000719",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_random_baseline_000719"
+          },
+          {
+            "name": "case_000013_random_step03_insert_s00_000719",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_random_baseline_000719"
+          },
+          {
+            "name": "case_000013_random_step03_insert_s02_000719",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_random_baseline_000719"
+          },
+          {
+            "name": "case_000013_random_step03_insert_s03_000719",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_random_baseline_000719"
+          },
+          {
+            "name": "case_000013_step01_insert_s02_000719",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_baseline_000719"
+          },
+          {
+            "name": "case_000013_step02_insert_s01_000719",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_baseline_000719"
+          },
+          {
+            "name": "case_000013_step02_insert_s03_000719",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000013_baseline_000719"
+          },
+          {
+            "name": "case_000014_step02_insert_s03_001641",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000014_baseline_001641"
+          },
+          {
+            "name": "case_000015_random_step01_insert_s03_000814",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step02_insert_s00_000814",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step02_insert_s03_000814",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step02_insert_s04_000814",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step03_insert_s01_000814",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step03_insert_s02_000814",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step03_insert_s04_000814",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step04_insert_s01_000814",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step04_insert_s02_000814",
+            "process": "random",
+            "range": "short",
+            "valid": 3,
+            "baseline": 1,
+            "delta": 2,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step04_insert_s03_000814",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000016_random_step01_insert_s04_001715",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000016_random_baseline_001715"
+          },
+          {
+            "name": "case_000016_step02_insert_s03_001715",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000016_baseline_001715"
+          },
+          {
+            "name": "case_000016_step03_insert_s00_001715",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000016_baseline_001715"
+          },
+          {
+            "name": "case_000019_step01_insert_s03_001866",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000019_baseline_001866"
+          },
+          {
+            "name": "case_000022_random_step04_insert_s01_000720",
+            "process": "random",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000022_random_baseline_000720"
+          },
+          {
+            "name": "case_000022_step01_insert_s00_000720",
+            "process": "fuzz",
+            "range": "short",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000022_baseline_000720"
+          }
+        ]
+      },
+      "middle": {
+        "cases": {
+          "fuzz": 19,
+          "random": 17
+        },
+        "objs": {
+          "fuzz": 31,
+          "random": 31
+        },
+        "no_inference": {
+          "fuzz": 0,
+          "random": 0
+        },
+        "unmatched": {
+          "fuzz": 18,
+          "random": 0
+        },
+        "valid_total": {
+          "fuzz": 444,
+          "random": 405
+        },
+        "baseline_total": {
+          "fuzz": 20,
+          "random": 14
+        },
+        "detail": [
+          {
+            "name": "case_000000_random_step04_insert_s03_001696",
+            "process": "random",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000000_random_baseline_001696"
+          },
+          {
+            "name": "case_000004_random_step04_insert_s01_000544",
+            "process": "random",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000004_random_baseline_000544"
+          },
+          {
+            "name": "case_000004_step01_insert_s02_000544",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000004_baseline_000544"
+          },
+          {
+            "name": "case_000004_step01_insert_s03_000544",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000004_baseline_000544"
+          },
+          {
+            "name": "case_000004_step01_insert_s04_000544",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000004_baseline_000544"
+          },
+          {
+            "name": "case_000004_step04_insert_s02_000544",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000004_baseline_000544"
+          },
+          {
+            "name": "case_000008_random_step01_insert_s01_000780",
+            "process": "random",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000008_random_baseline_000780"
+          },
+          {
+            "name": "case_000008_step01_insert_s00_000780",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000008_baseline_000780"
+          },
+          {
+            "name": "case_000011_step01_insert_s03_000493",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000011_baseline_000493"
+          },
+          {
+            "name": "case_000011_step03_insert_s04_000493",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000011_baseline_000493"
+          },
+          {
+            "name": "case_000011_step04_insert_s00_000493",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000011_baseline_000493"
+          },
+          {
+            "name": "case_000011_step04_insert_s01_000493",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000011_baseline_000493"
+          },
+          {
+            "name": "case_000015_random_step03_insert_s01_000814",
+            "process": "random",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step04_insert_s02_000814",
+            "process": "random",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_random_step04_insert_s03_000814",
+            "process": "random",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000015_random_baseline_000814"
+          },
+          {
+            "name": "case_000015_step02_insert_s02_000814",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000015_baseline_000814"
+          },
+          {
+            "name": "case_000015_step02_insert_s03_000814",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000015_baseline_000814"
+          },
+          {
+            "name": "case_000015_step03_insert_s00_000814",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000015_baseline_000814"
+          },
+          {
+            "name": "case_000015_step04_insert_s02_000814",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000015_baseline_000814"
+          },
+          {
+            "name": "case_000023_random_step01_insert_s00_000996",
+            "process": "random",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step01_insert_s03_000996",
+            "process": "random",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step02_insert_s00_000996",
+            "process": "random",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step02_insert_s01_000996",
+            "process": "random",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step02_insert_s02_000996",
+            "process": "random",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step02_insert_s03_000996",
+            "process": "random",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step02_insert_s04_000996",
+            "process": "random",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step03_insert_s01_000996",
+            "process": "random",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step03_insert_s02_000996",
+            "process": "random",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step03_insert_s03_000996",
+            "process": "random",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_random_step04_insert_s00_000996",
+            "process": "random",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_random_baseline_000996"
+          },
+          {
+            "name": "case_000023_step01_insert_s03_000996",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_baseline_000996"
+          },
+          {
+            "name": "case_000023_step02_insert_s00_000996",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_baseline_000996"
+          },
+          {
+            "name": "case_000023_step03_insert_s03_000996",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_baseline_000996"
+          },
+          {
+            "name": "case_000023_step04_insert_s00_000996",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_baseline_000996"
+          },
+          {
+            "name": "case_000023_step04_insert_s01_000996",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_baseline_000996"
+          },
+          {
+            "name": "case_000023_step04_insert_s02_000996",
+            "process": "fuzz",
+            "range": "middle",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000023_baseline_000996"
+          }
+        ]
+      },
+      "long": {
+        "cases": {
+          "fuzz": 4,
+          "random": 1
+        },
+        "objs": {
+          "fuzz": 19,
+          "random": 18
+        },
+        "no_inference": {
+          "fuzz": 0,
+          "random": 0
+        },
+        "unmatched": {
+          "fuzz": 18,
+          "random": 0
+        },
+        "valid_total": {
+          "fuzz": 444,
+          "random": 405
+        },
+        "baseline_total": {
+          "fuzz": 15,
+          "random": 17
+        },
+        "detail": [
+          {
+            "name": "case_000004_step02_insert_s00_000544",
+            "process": "fuzz",
+            "range": "long",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000004_baseline_000544"
+          },
+          {
+            "name": "case_000004_step03_insert_s01_000544",
+            "process": "fuzz",
+            "range": "long",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000004_baseline_000544"
+          },
+          {
+            "name": "case_000008_random_step02_delete_s01_000780",
+            "process": "random",
+            "range": "long",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000008_random_baseline_000780"
+          },
+          {
+            "name": "case_000011_step03_insert_s03_000493",
+            "process": "fuzz",
+            "range": "long",
+            "valid": 2,
+            "baseline": 1,
+            "delta": 1,
+            "baseline_case": "case_000011_baseline_000493"
+          },
+          {
+            "name": "case_000018_step02_insert_s03_001142",
+            "process": "fuzz",
+            "range": "long",
+            "valid": 1,
+            "baseline": 0,
+            "delta": 1,
+            "baseline_case": "case_000018_baseline_001142"
+          }
+        ]
+      }
+    },
+    "duplicate_baseline_keys": [],
+    "valid_cases": 849,
+    "baseline_keys": 50
+  }
+}
