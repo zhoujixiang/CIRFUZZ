@@ -5,7 +5,7 @@ Research code for **fuzzing collaborative perception systems**.
 ```
 CIRFUZZ/
 ├── CIRFUZZING/        # the fuzzing tool: cps_fuzz.py + helpers   (main entry point)
-├── road_prediction/   # builds the semantic road dataset with SalsaNext
+├── road_prediction/   # builds the semantic road dataset with FRNet
 └── V2V4Real/          # OpenCOOD-based collaborative perception stack (code only)
 ```
 
@@ -234,8 +234,16 @@ collaborative fusion is than ego‑only perception on the mutated frame. A case 
 ## 2. `road_prediction/` — dataset builder
 
 Standalone project that turns a raw V2V4Real‑style testset into a semantic
-road‑segmented dataset using the bundled **SalsaNext** network
-(`dataset_init.py` → `predictions/*.label`). See
+road‑segmented dataset using the bundled **FRNet** network
+(`dataset_init.py` → `predictions/*.label`), plus tooling to inspect the result:
+
+- `tools/frnet_infer_labels.py` — per‑point FRNet inference → `.label` writer.
+- `tools/frnet_visualize_road.py` — FRNet road prediction → top‑down BEV PNG.
+- `tools/compare_road_predictions.py` — side‑by‑side BEV comparison of two
+  label sets on identical frames.
+
+It emits the same Cityscapes‑style ids the fuzzer expects (road == 7), so
+`CIRFUZZING/` needs no changes. FRNet needs its own mmdet3d environment — see
 [road_prediction/README.md](road_prediction/README.md) for details.
 
 ## 3. `V2V4Real/` — collaborative perception stack

@@ -18,6 +18,9 @@ third/FRNet/work_dirs/
 third/FRNet/data/
 third/FRNet/*.egg-info/
 
+# FRNet road visualisations (frnet_visualize_road.py output)
+road_viz/
+
 # Large data
 *.zip
 *.npy

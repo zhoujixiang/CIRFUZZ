@@ -21,7 +21,8 @@ Standalone project for **road prediction dataset initialization** — extracted 
 road_prediction/
 ├── dataset_init.py             # entry point
 ├── tools/
-│   └── frnet_infer_labels.py   # FRNet per-point inference → .label writer
+│   ├── frnet_infer_labels.py   # FRNet per-point inference → .label writer
+│   └── frnet_visualize_road.py # FRNet road prediction → BEV PNG
 ├── third/FRNet/                # FRNet (Apache-2.0), vendored
 │   └── checkpoints/            # frnet-semantickitti_seg.pth (Git LFS, ~40 MB)
 ├── config/
@@ -63,6 +64,25 @@ Outputs are written next to the input, in the **parent** directory:
 - `<parent>/semantic/semanticKitti/sequences/{11,12}/velodyne` — bin files fed to FRNet
 - `<parent>/semantic/result/sequences/{11,12}/predictions/*.label` — FRNet predictions
 - `config/dataset_config.yml` — records `<parent>` as `dataset_path`
+
+## Visualisation
+
+`tools/frnet_visualize_road.py` runs FRNet and saves a top-down **BEV** image per
+frame — road in red, everything else in grey, equal-aspect axes in metres:
+
+```bash
+python tools/frnet_visualize_road.py \
+    --data-root /path/to/semantic/semanticKitti \
+    --sequences 11,12 --limit 20 \
+    --out-dir ./road_viz
+# -> ./road_viz/<seq>/<frame>_bev.png
+```
+
+Useful flags: `--extent` (BEV half-window in metres, default 60), `--limit`
+(frames per sequence, 0 = all), `--save-labels` (also write `predictions/*.label`).
+It reuses the same model build / pipeline / id remap as `frnet_infer_labels.py`,
+so the mask it draws is exactly what `dataset_init.py` writes. Like the driver, it
+must run under the FRNet interpreter (`frnet` env).
 
 ## Label contract
 
