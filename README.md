@@ -5,7 +5,7 @@ Research code for **fuzzing collaborative perception systems**.
 ```
 CIRFUZZ/
 ├── CIRFUZZING/        # the fuzzing tool: cps_fuzz.py + helpers   (main entry point)
-├── road_prediction/   # builds the semantic road dataset with FRNet
+├── road_prediction/   # builds the semantic road dataset with SalsaNext
 └── V2V4Real/          # OpenCOOD-based collaborative perception stack (code only)
 ```
 
@@ -35,35 +35,6 @@ Two mutation primitives are used:
 Each mutated scene is written out as a self‑contained OpenCOOD case
 (`velodyne/*.pcd` + `*.yaml` per agent), so it can be fed straight to
 `V2V4Real/opencood/tools/inference.py`.
-
-### Pipeline
-
-```
-                        ┌─────────────────────────────┐
-  dataset frame ──────► │  load ego + collab PC / YAML│
-                        │  segment road & non-road    │
-                        └──────────────┬──────────────┘
-                                       ▼
-                        ┌─────────────────────────────┐
-                        │  candidate road regions in  │
-                        │  the chosen mutation region │
-                        └──────────────┬──────────────┘
-                                       ▼
-        ┌──────────────────────────────────────────────────┐
-        │  beam search over `--ops-per-case` mutation steps │
-        │  each step: generate `--candidates-per-step`      │
-        │  insert/delete candidates → save all → optionally │
-        │  run inference → keep best (fuzz) / random        │
-        └──────────────────────┬───────────────────────────┘
-                               ▼
-        ┌──────────────────────────────────────────────────┐
-        │  fitness = object_missing + localization_failure  │
-        │  (Δ collab − ego), from inference.py              │
-        │  --compare_ego_v2x                                │
-        └──────────────────────┬───────────────────────────┘
-                               ▼
-        valid_cases/ · baseline_cases/ · interesting_cases/ · fuzz_manifest.yaml
-```
 
 **Search processes** (`--process`):
 
@@ -99,18 +70,18 @@ cd CIRFUZZING
 # 1) generate fuzzing cases only (no model inference)
 python cps_fuzz.py \
     --model-dir /path/to/opencood/logs/point_pillar_coalign_v2v4real \
-    --iterations 50 \
+    --iterations  \
     --process both \
-    --ops-per-case 2 \
-    --candidates-per-step 5 \
-    --mutation-region coop_only_outside \
-    --output-dir ./fuzz_out/run1
+    --ops-per-case \
+    --candidates-per-step  \
+    --mutation-region  \
+    --output-dir 
 
 # 2) same, but run the model on every candidate and keep only cases that
 #    increase the ego/collaborator error over the unmutated baseline
 python cps_fuzz.py \
     --model-dir /path/to/opencood/logs/point_pillar_coalign_v2v4real \
-    --iterations 50 \
+    --iterations  \
     --process fuzz \
     --run-inference \
     --fusion-method early \
@@ -192,20 +163,6 @@ least one `*epoch*.pth` checkpoint when `--run-inference` is used).
 - `ego_only` — only the ego‑side files are mutated, in the region only the ego
   lidar sees; the collaborating side is left untouched.
 
-### Fitness
-
-When inference is enabled, `inference.py --compare_ego_v2x` reports per‑frame
-error counts; fitness is
-
-```
-fitness = object_missing + localization_failure
-```
-
-taken from the `delta_v2x_minus_ego` counts — i.e. how much worse the
-collaborative fusion is than ego‑only perception on the mutated frame. A case is
-**interesting** when its fitness exceeds the unmutated baseline (or
-`--fitness-threshold` when no baseline is available).
-
 ### Outputs
 
 ```
@@ -227,24 +184,20 @@ collaborative fusion is than ego‑only perception on the mutated frame. A case 
 | `cps_outside_ego.py` | Outside‑ego region logic: 3‑way point classification, pose transforms, and a standalone CLI (`python cps_outside_ego.py`) to prepare/visualise outside‑ego assets. |
 | `config/` | Simulator config (`lidar_config.yml`) and dataset path configs used by the helpers. |
 | `core/`, `utils/` | lidar simulation and shared file/point‑cloud utilities. |
-| `dataset/v2x_dataset/` | Small sample dataset (2 agents × 3 frames) for smoke‑testing. |
 
 ---
 
 ## 2. `road_prediction/` — dataset builder
 
-Standalone project that turns a raw V2V4Real‑style testset into a semantic
-road‑segmented dataset using the bundled **FRNet** network
+Standalone project that turns a raw V2V4Real-style testset into a semantic
+road-segmented dataset using the bundled **FRNet** network
 (`dataset_init.py` → `predictions/*.label`), plus tooling to inspect the result:
 
-- `tools/frnet_infer_labels.py` — per‑point FRNet inference → `.label` writer.
-- `tools/frnet_visualize_road.py` — FRNet road prediction → top‑down BEV PNG.
-- `tools/compare_road_predictions.py` — side‑by‑side BEV comparison of two
+- `tools/frnet_infer_labels.py` — per-point FRNet inference → `.label` writer.
+- `tools/frnet_visualize_road.py` — FRNet road prediction → top-down BEV PNG.
+- `tools/compare_road_predictions.py` — side-by-side BEV comparison of two
   label sets on identical frames.
 
-It emits the same Cityscapes‑style ids the fuzzer expects (road == 7), so
-`CIRFUZZING/` needs no changes. FRNet needs its own mmdet3d environment — see
-[road_prediction/README.md](road_prediction/README.md) for details.
 
 ## 3. `V2V4Real/` — collaborative perception stack
 
