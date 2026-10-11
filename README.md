@@ -9,10 +9,6 @@ CIRFUZZ/
 └── V2V4Real/          # OpenCOOD-based collaborative perception stack (code only)
 ```
 
-> **Not tracked in this repo** (populated at runtime, several tens of GB — see
-> [.gitignore](.gitignore)): `V2V4Real/model/` (checkpoints), `*/logs/`
-> (training/inference logs), `CIRFUZZING/_assets/` (ShapeNet meshes).
-
 ---
 
 ## 1. `CIRFUZZING/cps_fuzz.py` — the fuzzer
